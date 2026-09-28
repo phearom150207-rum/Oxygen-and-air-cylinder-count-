@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>របាយការណ៍រាប់សំបកដបអុកស៊ីសែននិងខ្យល់</title>
+    
+    <!-- រូបតំណាង Web App (Favicon & Apple Touch Icon) -->
+    <link rel="icon" href="favicon.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="favicon.jpg">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Moul&family=Siemreap&display=swap');
 
@@ -345,7 +350,7 @@
                 <td><input type="number" class="col-5 save-field" data-id="r8c5" value="" oninput="handleInput()"></td>
             </tr>
             <tr class="data-row bg-subtle">
-                <td class="location-cell">ក្នុងប្រព័ន្ធអុកស៊ីសែន</td>
+                <td class="location-cell">ក្នងប្រព័ន្ធអុកស៊ីសែន</td>
                 <td><input type="number" class="col-0 save-field" data-id="r9c0" value="161" oninput="handleInput()"></td>
                 <td><input type="number" class="col-1 save-field" data-id="r9c1" value="69" oninput="handleInput()"></td>
                 <td><input type="number" class="col-2 save-field" data-id="r9c2" value="19" oninput="handleInput()"></td>
@@ -459,7 +464,6 @@
     }
 
     function clearData() {
-        // ដក confirm() ចេញ ដើម្បីសំអាតទិន្នន័យដោយស្វ័យប្រវត្តិតែម្ដង
         let fields = document.querySelectorAll('.save-field');
         fields.forEach(field => {
             field.value = "";
