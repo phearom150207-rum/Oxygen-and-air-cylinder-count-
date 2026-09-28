@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>របាយការណ៍រាប់សំបកដបអុកស៊ីសែននិងខ្យល់</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Moul&family=Siemreap&display=swap');
+
+        @page {
+            size: A4 portrait;
+            margin: 5mm;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Siemreap', 'Khmer OS Battambang', 'Segoe UI', sans-serif;
+            background-color: #f1f5f9;
+            color: #0f172a;
+            margin: 0;
+            padding: 10px;
+            font-size: 10px;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 12px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #0284c7;
+        }
+
+        .header h2 {
+            font-family: 'Moul', 'Khmer OS Muol Light', serif;
+            color: #0369a1;
+            font-size: 13px;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+            font-size: 10px;
+            table-layout: fixed;
+        }
+
+        th, td {
+            border: 1px solid #94a3b8;
+            padding: 4px 2px;
+            vertical-align: middle;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            font-weight: bold;
+            font-size: 9.5px;
+        }
+
+        .bg-subtle {
+            background-color: #f8fafc;
+        }
+
+        .bg-col-total {
+            background-color: #e0f2fe;
+            font-weight: bold;
+        }
+
+        .bg-category-total {
+            background-color: #bae6fd;
+            font-weight: bold;
+        }
+
+        .location-cell {
+            text-align: left;
+            padding-left: 6px;
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 9.5px;
+        }
+
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 3px 0;
+            border: 1px solid #cbd5e1;
+            border-radius: 3px;
+            text-align: center;
+            font-family: inherit;
+            font-size: 10px;
+            background-color: #fff;
+            color: #0f172a;
+            -moz-appearance: textfield;
+        }
+
+        input[readonly] {
+            font-weight: bold;
+            color: #0369a1;
+            border: 1px solid #7dd3fc;
+        }
+
+        .col-sum-input {
+            background-color: #f0f9ff;
+        }
+
+        .cat-sum-input {
+            background-color: #bae6fd;
+            color: #0c4a6e !important;
+            font-size: 10.5px !important;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="text"]:focus, input[type="number"]:not([readonly]):focus {
+            outline: none;
+            border-color: #0284c7;
+            background-color: #f0f9ff;
+        }
+
+        .note {
+            font-size: 8.5px;
+            color: #dc2626;
+            margin-top: 8px;
+            text-align: center;
+            font-style: italic;
+        }
+
+        .footer-section {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+        }
+
+        .footer-col {
+            flex: 1;
+        }
+
+        .field-group label {
+            display: block;
+            margin-bottom: 3px;
+            font-weight: bold;
+            color: #334155;
+            font-size: 9.5px;
+        }
+
+        .field-group input {
+            text-align: left;
+            width: 100%;
+            padding: 5px;
+            font-size: 9.5px;
+        }
+
+        .signature-box {
+            border: 1px dashed #64748b;
+            height: 45px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            background-color: #fafafa;
+            margin-top: 3px;
+            font-size: 9px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>របាយការណ៍រាប់សំបកដបអុកស៊ីសែននិងខ្យល់</h2>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2" style="width: 28%;">ទីតាំង</th>
+                <th colspan="2" style="width: 24%;">អុកស៊ីសែនធំ</th>
+                <th colspan="2" style="width: 24%;">អុកស៊ីសែនតូច</th>
+                <th colspan="2" style="width: 24%;">ខ្យល់ (Air)</th>
+            </tr>
+            <tr>
+                <th>ពេញ</th>
+                <th>សំបក</th>
+                <th>ពេញ</th>
+                <th>សំបក</th>
+                <th>ពេញ</th>
+                <th>សំបក</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="data-row">
+                <td class="location-cell">ឡាន Ambulance</td>
+                <td><input type="number" class="col-0" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="3" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">បន្ទប់ស៊ីធីស្កេន</td>
+                <td><input type="number" class="col-0" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">បន្ទប់ជាង</td>
+                <td><input type="number" class="col-0" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">សាល IPD1</td>
+                <td><input type="number" class="col-0" value="6" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">សាល IPD2</td>
+                <td><input type="number" class="col-0" value="3" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="2" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">សាល Surgical</td>
+                <td><input type="number" class="col-0" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">មុខបន្ទប់ OT</td>
+                <td><input type="number" class="col-0" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">សាល ER</td>
+                <td><input type="number" class="col-0" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row">
+                <td class="location-cell">សាល Neonate</td>
+                <td><input type="number" class="col-0" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="1" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="data-row bg-subtle">
+                <td class="location-cell">ប្រព័ន្ធធុងអុកស៊ីសែន</td>
+                <td><input type="number" class="col-0" value="161" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-1" value="69" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-2" value="19" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-3" value="2" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-4" value="111" oninput="calculateTotals()"></td>
+                <td><input type="number" class="col-5" value="17" oninput="calculateTotals()"></td>
+            </tr>
+            <tr class="bg-col-total">
+                <td class="location-cell">សរុបតាមជួរឈរ</td>
+                <td><input type="number" id="total-0" class="col-sum-input" readonly value="174"></td>
+                <td><input type="number" id="total-1" class="col-sum-input" readonly value="69"></td>
+                <td><input type="number" id="total-2" class="col-sum-input" readonly value="29"></td>
+                <td><input type="number" id="total-3" class="col-sum-input" readonly value="2"></td>
+                <td><input type="number" id="total-4" class="col-sum-input" readonly value="113"></td>
+                <td><input type="number" id="total-5" class="col-sum-input" readonly value="17"></td>
+            </tr>
+            <tr class="bg-category-total">
+                <td class="location-cell">សរុបរួម (ពេញ + សំបក)</td>
+                <td colspan="2"><input type="number" id="cat-total-oxy-large" class="cat-sum-input" readonly value="243"></td>
+                <td colspan="2"><input type="number" id="cat-total-oxy-small" class="cat-sum-input" readonly value="31"></td>
+                <td colspan="2"><input type="number" id="cat-total-air" class="cat-sum-input" readonly value="130"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="note">
+        បញ្ជាក់ ៖ ទិន្នន័យជួរសរុបនីមួយៗ និងសរុបរួម (ពេញ+សំបក) នឹងគណនាបូកស្វ័យប្រវត្តិ!
+    </div>
+
+    <div class="footer-section">
+        <div class="footer-col">
+            <div class="field-group">
+                <label>ឈ្មោះអ្នករាយការណ៍ ៖</label>
+                <input type="text" placeholder="បញ្ចូលឈ្មោះ...">
+            </div>
+        </div>
+        <div class="footer-col">
+            <div class="field-group">
+                <label>ហត្ថលេខា ៖</label>
+                <div class="signature-box">
+                    (ចុះហត្ថលេខា)
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function calculateTotals() {
+        let colTotals = [];
+        for (let col = 0; col < 6; col++) {
+            let inputs = document.querySelectorAll('.col-' + col);
+            let sum = 0;
+            inputs.forEach(input => {
+                let val = parseFloat(input.value);
+                if (!isNaN(val)) {
+                    sum += val;
+                }
+            });
+            colTotals[col] = sum;
+            document.getElementById('total-' + col).value = sum;
+        }
+
+        document.getElementById('cat-total-oxy-large').value = colTotals[0] + colTotals[1];
+        document.getElementById('cat-total-oxy-small').value = colTotals[2] + colTotals[3];
+        document.getElementById('cat-total-air').value = colTotals[4] + colTotals[5];
+    }
+    calculateTotals();
+</script>
+
+</body>
+                      </html>
