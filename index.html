@@ -345,7 +345,7 @@
                 <td><input type="number" class="col-5 save-field" data-id="r8c5" value="" oninput="handleInput()"></td>
             </tr>
             <tr class="data-row bg-subtle">
-                <td class="location-cell">ប្រព័ន្ធអុកស៊ីសែន</td>
+                <td class="location-cell">ក្នុងប្រព័ន្ធអុកស៊ីសែន</td>
                 <td><input type="number" class="col-0 save-field" data-id="r9c0" value="161" oninput="handleInput()"></td>
                 <td><input type="number" class="col-1 save-field" data-id="r9c1" value="69" oninput="handleInput()"></td>
                 <td><input type="number" class="col-2 save-field" data-id="r9c2" value="19" oninput="handleInput()"></td>
@@ -459,19 +459,18 @@
     }
 
     function clearData() {
-        if (confirm("តើអ្នកពិតជាចង់សំអាតទិន្នន័យទាំងអស់ដែលបានបញ្ចូលមែនទេ?")) {
-            let fields = document.querySelectorAll('.save-field');
-            fields.forEach(field => {
-                field.value = "";
-            });
-            localStorage.removeItem(STORAGE_KEY);
-            calculateTotals();
-            
-            let status = document.getElementById('save-status');
-            if (status) {
-                status.innerText = "✓ ទិន្នន័យត្រូវបានសំអាតរួចរាល់";
-                status.style.color = "#dc2626";
-            }
+        // ដក confirm() ចេញ ដើម្បីសំអាតទិន្នន័យដោយស្វ័យប្រវត្តិតែម្ដង
+        let fields = document.querySelectorAll('.save-field');
+        fields.forEach(field => {
+            field.value = "";
+        });
+        localStorage.removeItem(STORAGE_KEY);
+        calculateTotals();
+        
+        let status = document.getElementById('save-status');
+        if (status) {
+            status.innerText = "✓ ទិន្នន័យត្រូវបានសំអាតរួចរាល់";
+            status.style.color = "#dc2626";
         }
     }
 
@@ -481,4 +480,4 @@
 </script>
 
 </body>
-                </html>
+    </html>
